@@ -19,9 +19,6 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    - uses: webfactory/ssh-agent@v0.4.0
-      with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: git-filter-repo
       id: filter
-      uses: tarrow/git-repo-filter-docker-action@v3
+      uses: tarrow/git-repo-filter-docker-action@v4
