@@ -21,6 +21,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: git-filter-repo
       id: filter
-      uses: tarrow/git-repo-filter-docker-action@v13
+      uses: tarrow/git-repo-filter-docker-action@v14
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
