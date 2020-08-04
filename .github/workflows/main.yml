@@ -24,4 +24,4 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: git-filter-repo
       id: filter
-      uses: tarrow/git-repo-filter-docker-action@v2
+      uses: tarrow/git-repo-filter-docker-action@v3
