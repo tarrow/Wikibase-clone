@@ -22,3 +22,5 @@ jobs:
     - name: git-filter-repo
       id: filter
       uses: tarrow/git-repo-filter-docker-action@v6
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
