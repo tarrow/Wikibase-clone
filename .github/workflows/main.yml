@@ -27,4 +27,16 @@ jobs:
         targetOrg: tarrow
         targetRepo: Changes-clone
         targetBranch: main
-        filterArguments: "--path=lib/{includes,tests/phpunit}/{c,C}hanges/ --path lib/packages/wikibase/changes/ --path .mailmap --path-rename=lib/includes/{c,C}hanges:src --path-rename=lib/tests/phpunit/{c,C}hanges:tests --path-rename lib/packages/wikibase/changes/: --message-callback 'return re.sub(b\"^changes: \", b\"\", message)'"
+        filterArguments: >-
+          --path=lib/includes/changes/
+          --path=lib/includes/Changes/  
+          --path=lib/tests/phpunit/changes/ 
+          --path=lib/tests/phpunit/Changes/ 
+          --path=lib/packages/wikibase/changes/
+          --path=.mailmap
+          --path-rename=lib/includes/changes:src
+          --path-rename=lib/includes/Changes:src
+          --path-rename=lib/tests/phpunit/changes:tests
+          --path-rename=lib/tests/phpunit/Changes:tests
+          --path-rename lib/packages/wikibase/changes/:
+          --message-callback 'return re.sub(b"^changes: ", b"", message)'
